@@ -1,0 +1,1 @@
+This repository contains basic JavaScript files where pure vanilla script is used to get a fundamental understanding of JavaScript. It serves as an introductory guide for beginners to learn the core concepts and syntax of JavaScript.
