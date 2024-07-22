@@ -1,0 +1,39 @@
+
+.formField{
+    margin: auto;
+    width: 50%;
+    border: 2px solid magenta;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.btn{
+    width:20%;
+    
+
+}
+.container-1{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flex-box-container-1{
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*EVERY DIV IN THIS CONTAINER DOES THIS*/
+.flex-box-container-1 div{
+    padding: 10px;
+    align-items: center;
+}
+

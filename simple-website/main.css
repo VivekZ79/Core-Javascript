@@ -1,0 +1,283 @@
+:root{
+    /*  REPRESENTS THE <HTML> ELEMENT IN THE HTML PAGE
+        HERE WE ARE DEFINING THREE COLORS
+        NOTE: COMMENTED OUT LAST LIGHT-THEME TO UPDATE IT LONG WITH DARK-THEME
+        NOTE: COMMENTED OUT BODY AND ADDED UPDATED BODY AND "*" SECTIONS   */
+        --pink: #d1385e;
+        --white: #FFFFFF;
+        --black: #000000;
+    }
+
+/*  COMMENTED OUT AFTER LIGHT-THEME WAS UPDATED AND DARKTHEME WAS ADDED
+body{
+    font-family: sans-serif;
+}*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+body {
+   background-color: #4d5972;
+}
+
+a {
+   text-decoration: none;
+}
+
+.container {
+   background-color: #000;
+   padding: 10px;
+}
+
+.navbar-container {
+   width: 85%;
+   margin: 0 auto;
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navbar .navbar-logo a {
+   color: #91f600;
+   font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-menu {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#navbarMenus ul {
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   list-style: none;
+}
+
+#navbarMenus ul li a {
+   color: #fff;
+   font-size: .9rem;
+   text-transform: uppercase;
+   transition: all 0.3s;
+}
+
+#navbarMenus ul li a:hover {
+   color: #91f600;
+   transition: all 0.3s;
+}
+
+#navbarMenus ul li a.active{
+  color: #00bdb7;
+}
+
+/* toggler */
+
+#toggle {
+   width: 25px;
+   height: 25px;
+   cursor: pointer;
+   position: relative;
+   transition: 0.5s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+   padding-top: 12px;
+}
+
+#check{
+  width: 25px;
+   height: 25px;
+   cursor: pointer;
+   position: relative;
+   transition: 0.5s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+   padding-top: 12px;
+}
+
+#toggle:before {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background-color: #fff;
+   transform: translateY(-9px);
+   box-shadow: 0 9px #fff;
+   transition: 0.2s;
+}
+
+#toggle:after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background-color: #fff;
+   transform: translateY(9px);
+   transition: 0.2s;
+}
+
+/* function */
+#toggle.active:before {
+   transform: translateY(0px) rotate(45deg);
+   box-shadow: 0 0px #fff;
+   transition: 0.2s;
+}
+
+#toggle.active:after {
+   transform: translateY(0px) rotate(-45deg);
+   box-shadow: 0 0px #fff;
+   transition: 0.2s;
+}
+
+.container-body {
+   width: 85%;
+   margin: 0 auto;
+   padding: 10px;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.container-body h2 {
+   color: #ff9;
+   text-align: center;
+}
+
+.title{
+  color: #00bdb7;
+}
+
+@media (max-width: 767px) {
+   .navbar-container {
+      width: 100%;
+   }
+
+   .container-body {
+      width: 100%;
+      padding: 10px;
+   }
+
+   #toggle {
+      display: block;
+   }
+
+   #navbarMenus {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      position: absolute;
+      top: 47px;
+      left: 0;
+      width: 100%;
+      background-color: #203232;
+      max-height: 0px;
+      transition: 0.3s;
+      overflow: hidden;
+   }
+
+   #navbarMenus ul {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 0;
+      font-size: 30px;
+      gap: 10px;
+   }
+
+   #navbarMenus ul li {
+      display: inline-block;
+   }
+
+   /* function nav */
+   #navbarMenus.active {
+      max-height: 22em;
+      transition: 0.3s;
+      box-shadow: 0vh 50vh 0 50vh rgba(0, 0, 0, 0.548);
+   }
+}
+
+*{
+    /*UNIVERSAL SELECTOR THAT APPLIES TO ALL PAGE ELEMENTS EXCEPT FOR A MORE SPECIFIC ELEMENT SELECTOR OVERRRIDES*/
+    color: var(--fontColor);
+    font-family: Helvetica;
+}
+
+body{
+    background: var(--bg);
+}
+
+ul{
+    font-family: monospace;
+}
+
+li{
+    list-style: circle;
+}
+
+.list{
+    list-style: square;
+}
+
+/*  COMMENTED OUT AFTER "*" SELECTOR WAS PUT IN PLACE
+#msg{
+    COMMENT: THIS OVERRIDES THE "BODY" STYLE
+    font-family: 'Times New Roman';
+}*/
+
+/*  COMMENTED OUT AFTER :ROOT WAS ADDED
+.light-theme{
+    color: #000000;
+    background: #d1385e;
+}*/
+
+/*  UPDATED AFTER .BTN WAS ADDED
+.light-theme{
+    --bg: var(--pink);
+    --fontColor: var(--black);
+}
+
+.dark-theme{
+    --bg: var(--black);
+    --fontColor: var(--pink);
+}*/
+
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--pink);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--pink);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+.btn{
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+.btn:focus { outline-style: none; }
+
